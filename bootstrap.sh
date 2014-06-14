@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-
-mysql -u root -p -h localhost < user.sql
-mysql -u root -p -h localhost < /var/www/dump.sql
+echo "creating UWCarpool User"
+mysql -u root --password="root" -h localhost < /vagrant/user.sql
+echo "importing SQL dump"
+mysql -u root --password="root" -h localhost carpoolfinder < /var/www/dump.sql
