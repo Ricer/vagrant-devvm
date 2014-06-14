@@ -43,28 +43,29 @@ Vagrant::Config.run do |config|
     chef.roles_path = "chef/roles"
     chef.data_bags_path = "chef/data_bags"
 
-	chef.add_recipe "apt"
-	chef.add_recipe "build-essential"
-	chef.add_recipe "ubuntu"
-	chef.add_recipe "apache2"
-	chef.add_recipe "mysql::client"
-	chef.add_recipe "mysql::server"
-	chef.add_recipe "php"
-	chef.add_recipe "php::module_curl"
-	chef.add_recipe "php::module_mysql"
-	chef.add_recipe "apache2::mod_php5"
-	chef.add_recipe "apache2::mod_rewrite"
-  chef.add_recipe "lamp"
+  	chef.add_recipe "apt"
+  	chef.add_recipe "build-essential"
+  	chef.add_recipe "ubuntu"
+  	chef.add_recipe "apache2"
+  	chef.add_recipe "mysql::client"
+  	chef.add_recipe "mysql::server"
+  	chef.add_recipe "php"
+  	chef.add_recipe "php::module_curl"
+  	chef.add_recipe "php::module_mysql"
+  	chef.add_recipe "apache2::mod_php5"
+  	chef.add_recipe "apache2::mod_rewrite"
+    chef.add_recipe "lamp"
 
-	chef.json = {
-		:apache => {
-			:user => "vagrant",
-			:group => "vagrant"
-		},
-		:mysql => {
-			:server_root_password => "root",
-			:allow_remote_root => true
-		}
-	}
+  	chef.json = {
+  		:apache => {
+  			:user => "vagrant",
+  			:group => "vagrant"
+  		},
+  		:mysql => {
+  			:server_root_password => "root",
+  			:allow_remote_root => true
+  		}
+  	}
   end
+  config.vm.provision :shell, path: "bootstrap.sh"
 end
