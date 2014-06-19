@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400|Raleway:600,400);
+
+@darkTextColor:#515162;
+@midTextColor:#747dab;
+@greyTextColor:#575757;
+
+
+@blue: #45b1ff;
+@blueHover: #0094ff;
+@blueDark: #598fd9;
+@fbBlue:#5a74a8;
+@fbBlueHover: #406090;
+@fbBlueDark:#485574;
+@lightBorderColor:#dfdfdf;
+@midBorderColor:#aaaaaa;
+
+@cloud: #ecf0f1;
+@red: #ff3500;
+@green:#3fbf51;
+@yellow:#f1c40f;
+
+@filterColor: #f2f4f4;
+@listColor:#e9e8ea;
+
+//login
+@borderColor: #cccccc;
+@backgroundColor:#edf3f7;
+@backgroundShadowColor:#434351;
+
+@animationFn:cubic-bezier(.51,1.37,.78,1.45);
+
+
+ul{
+  padding: 0;margin:0;list-style: none;
+}
+body{
+  background: @backgroundColor;
+  font-family: 'Raleway', sans-serif;
+}
+a{cursor: pointer;}
+
+.fadeShow(@opac:1){
+  opacity: 0;
+  pointer-events:none;
+  transition:opacity .3s,transform .3s @animationFn;
+  -webkit-transition:opacity .3s,-webkit-transform .3s @animationFn;
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+  &.show,&.in{
+    opacity: @opac;
+    pointer-events:all;
+    -webkit-transform:scale(1);
+    transform:scale(1);
+  }
+}
+.hoverZoom(@zoom:1.05){
+  -webkit-transition: -webkit-transform .3s @animationFn, opacity .3s;
+  transition: transform .3s @animationFn, opacity .3s;
+  &:hover{
+    -webkit-transform:scale(@zoom);
+    transform:scale(@zoom);
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
+    <title>UWCarpool♥</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Loading CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/lib/jquery-2.0.3.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/moment.min.js"></script>
+    
+    <script src="js/lib/react/react-with-addons.min.js"></script>
+    <script src="js/lib/react/JSXTransformer.js"></script>
+    <script>
+      data={
+        user:<?=$view['user']?json_encode($view['user']):"null"?>,
+        courseInfo:<?=$view['courseInfo']?$view['courseInfo']:"null"?>,
+        schedule:<?=$view['schedule']?$view['schedule']:"null"?>
+      }
+    </script>
+    <script type='text/jsx' src="js/index.js"></script>
+    
+  </head>
+  <body>
+  </body>
+</html>
+
+<!--
+	<?php
+		echo "debug _POST---<br>";print_r($view);echo "<br><br>debug _SESSION---<br>";print_r($_SESSION);
+	?>
+-->
