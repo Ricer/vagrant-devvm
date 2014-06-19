@@ -14,9 +14,10 @@ Usage
 -----
 
 ## Startup
-	$ git clone https://github.com/Ricer/vagrant-devvm
-	$ cd vagrant-lamp
-	$ vagrant up
+	git clone https://github.com/Ricer/vagrant-devvm
+	git clone https://github.com/Ricer/uwcarpool.git
+	cd vagrant-devvm
+	vagrant up
 
 
 ### Apache
