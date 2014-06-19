@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-UWCARPOOL_DUMP = /var/www/uwcarpool/dump.sql
-UWSCHEDULER_DUMP = /var/www/uwscheduler/dump.sql
+UWCARPOOL_DUMP="/var/www/uwcarpool/dump.sql"
+UWSCHEDULER_DUMP="/var/www/uwscheduler/dump.sql"
 
 #create databases and users
 echo "creating UWCarpool User"
