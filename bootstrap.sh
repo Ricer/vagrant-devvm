@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-UWCARPOOL_DUMP="/var/www/uwcarpool/dump.sql"
-UWSCHEDULER_DUMP="/var/www/uwscheduler/dump.sql"
+UWCARPOOL_DUMP="/var/www/dump.sql"
+# UWSCHEDULER_DUMP="/var/www/uwscheduler/dump.sql"
 
 #create databases and users
 echo "creating UWCarpool User"
@@ -13,6 +13,6 @@ echo "importing SQL dump"
 if [ -d "$UWCARPOOL_DUMP" ]; then
   mysql -u root --password="root" -h localhost carpoolfinder < $UWCARPOOL_DUMP
 fi
-if [ -d "$UWSCHEDULER_DUMP" ]; then
-  mysql -u root --password="root" -h localhost carpoolfinder < $UWSCHEDULER_DUMP
-fi
+# if [ -d "$UWSCHEDULER_DUMP" ]; then
+#   mysql -u root --password="root" -h localhost carpoolfinder < $UWSCHEDULER_DUMP
+# fi
